@@ -58,6 +58,7 @@ instance/
 .webassets-cache
 static/
 *.db
+versions/
 
 # JetBrains
 .idea/

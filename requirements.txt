@@ -16,7 +16,7 @@ pillow==11.0.0
 pycparser==2.18
 setuptools==75.6.0
 six==1.11.0
-SQLAlchemy==1.2.7
+SQLAlchemy==1.2.19
 Werkzeug==0.14.1
 wheel==0.45.1
 WTForms==2.1

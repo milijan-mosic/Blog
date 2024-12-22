@@ -30,7 +30,7 @@ def create_app(config_class=Config):
     from src.main.routes import main
     from src.posts.routes import posts
     from src.users.routes import users
-    
+
     app.register_blueprint(users)
     app.register_blueprint(posts)
     app.register_blueprint(main)

@@ -1,10 +1,16 @@
-from flask import render_template, url_for, flash, redirect, request, Blueprint
-from flask_login import login_user, current_user, logout_user, login_required
-from flaskblog import db, bcrypt
-from flaskblog.models import User, Post
-from flaskblog.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
-                                   RequestResetForm, ResetPasswordForm)
-from flaskblog.users.utils import save_picture, send_reset_email
+from flask import Blueprint, flash, redirect, render_template, request, url_for
+from flask_login import current_user, login_required, login_user, logout_user
+
+from src import bcrypt, db
+from src.models import Post, User
+from src.users.forms import (
+    LoginForm,
+    RegistrationForm,
+    RequestResetForm,
+    ResetPasswordForm,
+    UpdateAccountForm,
+)
+from src.users.utils import save_picture, send_reset_email
 
 users = Blueprint('users', __name__)
 

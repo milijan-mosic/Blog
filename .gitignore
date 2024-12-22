@@ -1,0 +1,68 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+.eggs/
+lib/
+lib64/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Environment variables and virtual environments
+.env/
+.venv/
+env/
+venv/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Log files
+*.log
+
+# Coverage reports
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+nosetests.xml
+test-*.xml
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+# pyre type checker
+.pyre/
+
+# Flask
+instance/
+.webassets-cache
+
+# JetBrains
+.idea/
+
+# VS Code settings
+.vscode/
+
+# Python packaging tools
+pipfile.lock
+poetry.lock

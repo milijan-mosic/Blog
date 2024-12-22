@@ -1,4 +1,4 @@
-FROM python:3.9-alpine AS builder
+FROM python:3.12-alpine AS builder
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
@@ -21,16 +21,18 @@ RUN pip install --upgrade pip && \
 
 # -------------------------------------------------------------------------------------------------------------------------------- # 
 
-FROM python:3.9-alpine
+FROM python:3.12-alpine
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
-    FLASK_APP=main
+    FLASK_APP=app
 
 COPY --from=builder /install /usr/local
 
 WORKDIR /app
-    
+
 EXPOSE 5000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
